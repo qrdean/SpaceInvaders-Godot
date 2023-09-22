@@ -1,0 +1,244 @@
+[gd_scene load_steps=13 format=3 uid="uid://bevanheinktc0"]
+
+[ext_resource type="Texture2D" uid="uid://bhrbe3vycparo" path="res://assets/background.png" id="1_0t6jq"]
+[ext_resource type="Script" path="res://level.gd" id="1_uvolq"]
+[ext_resource type="PackedScene" uid="uid://d0jsa5llqplbi" path="res://invader.tscn" id="2_f0vse"]
+[ext_resource type="Script" path="res://EnemyLine.gd" id="2_m1j5g"]
+[ext_resource type="PackedScene" uid="uid://ekbk8i2acfu0" path="res://player.tscn" id="3_em0ml"]
+[ext_resource type="Script" path="res://LivesLabel.gd" id="6_314mj"]
+[ext_resource type="Script" path="res://ScoreLabel.gd" id="7_wjw52"]
+[ext_resource type="Script" path="res://GameOverLabel.gd" id="8_poduk"]
+[ext_resource type="PackedScene" uid="uid://d4gh6hngndbl7" path="res://mothership.tscn" id="9_r3xli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqpv4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ebqlc"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_cn6sa"]
+font_size = 12
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_uvolq")
+mothership = ExtResource("9_r3xli")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(323, 181)
+texture = ExtResource("1_0t6jq")
+
+[node name="EnemyLine1" type="Node2D" parent="."]
+script = ExtResource("2_m1j5g")
+
+[node name="Invader" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(81, 47)
+
+[node name="Invader2" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(330, 47)
+
+[node name="Invader3" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(288, 47)
+
+[node name="Invader4" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(244, 47)
+
+[node name="Invader5" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(203, 47)
+
+[node name="Invader6" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(162, 47)
+
+[node name="Invader7" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(121, 47)
+
+[node name="Invader8" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(456, 47)
+
+[node name="Invader9" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(413, 47)
+
+[node name="Invader10" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(372, 47)
+
+[node name="Invader11" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(534, 47)
+
+[node name="Invader12" parent="EnemyLine1" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(493, 47)
+
+[node name="EnemyLine2" type="Node2D" parent="."]
+position = Vector2(0, 35)
+script = ExtResource("2_m1j5g")
+
+[node name="Invader" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(81, 47)
+
+[node name="Invader2" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(330, 47)
+
+[node name="Invader3" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(288, 47)
+
+[node name="Invader4" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(244, 47)
+
+[node name="Invader5" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(203, 47)
+
+[node name="Invader6" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(162, 47)
+
+[node name="Invader7" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(121, 47)
+
+[node name="Invader8" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(456, 47)
+
+[node name="Invader9" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(413, 47)
+
+[node name="Invader10" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(372, 47)
+
+[node name="Invader11" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(534, 47)
+
+[node name="Invader12" parent="EnemyLine2" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(493, 47)
+
+[node name="EnemyLine3" type="Node2D" parent="."]
+position = Vector2(2.08165e-12, 70)
+script = ExtResource("2_m1j5g")
+
+[node name="Invader" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(81, 47)
+
+[node name="Invader2" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(330, 47)
+
+[node name="Invader3" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(288, 47)
+
+[node name="Invader4" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(244, 47)
+
+[node name="Invader5" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(203, 47)
+
+[node name="Invader6" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(162, 47)
+
+[node name="Invader7" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(121, 47)
+
+[node name="Invader8" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(456, 47)
+
+[node name="Invader9" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(413, 47)
+
+[node name="Invader10" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(372, 47)
+
+[node name="Invader11" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(534, 47)
+
+[node name="Invader12" parent="EnemyLine3" groups=["Enemy"] instance=ExtResource("2_f0vse")]
+position = Vector2(493, 47)
+
+[node name="Player" parent="." instance=ExtResource("3_em0ml")]
+unique_name_in_owner = true
+position = Vector2(328, 333)
+
+[node name="Boundary" type="Node2D" parent="."]
+
+[node name="upper" type="Area2D" parent="Boundary" groups=["bounds"]]
+position = Vector2(320, 2)
+scale = Vector2(32.28, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/upper"]
+shape = SubResource("RectangleShape2D_mqpv4")
+
+[node name="side1" type="Area2D" parent="Boundary" groups=["bounds"]]
+position = Vector2(2.08165e-12, 180)
+scale = Vector2(1, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/side1"]
+shape = SubResource("RectangleShape2D_mqpv4")
+
+[node name="side2" type="Area2D" parent="Boundary" groups=["bounds"]]
+position = Vector2(640, 180)
+scale = Vector2(1, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/side2"]
+shape = SubResource("RectangleShape2D_mqpv4")
+
+[node name="EnemyTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="MothershipTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 8.0
+one_shot = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LivesLabel" type="Label" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_top = 13.0
+offset_right = 58.0
+offset_bottom = 36.0
+text = "Lives: "
+label_settings = SubResource("LabelSettings_ebqlc")
+script = ExtResource("6_314mj")
+
+[node name="ScoreLabel" type="Label" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 576.0
+offset_top = 11.0
+offset_right = 616.0
+offset_bottom = 34.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_cn6sa")
+script = ExtResource("7_wjw52")
+
+[node name="GameOverLabel" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 281.0
+offset_top = 167.0
+offset_right = 368.0
+offset_bottom = 193.0
+text = "Game Over"
+script = ExtResource("8_poduk")
+
+[node name="mothership_spawn" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(29, 30)
+
+[connection signal="game_over_ui" from="." to="Control/GameOverLabel" method="_on_world_game_over_ui"]
+[connection signal="update_lives_ui" from="." to="Control/LivesLabel" method="_on_world_update_lives_ui"]
+[connection signal="update_score_ui" from="." to="Control/ScoreLabel" method="_on_world_update_score_ui"]
+[connection signal="all_invaders_dead" from="EnemyLine1" to="." method="_on_enemy_line_1_all_invaders_dead"]
+[connection signal="invader_death" from="EnemyLine1" to="." method="_on_enemy_line_1_invader_death"]
+[connection signal="spawn_bullet" from="EnemyLine1" to="." method="_on_enemy_line_1_spawn_bullet"]
+[connection signal="all_invaders_dead" from="EnemyLine2" to="." method="_on_enemy_line_2_all_invaders_dead"]
+[connection signal="invader_death" from="EnemyLine2" to="." method="_on_enemy_line_2_invader_death"]
+[connection signal="spawn_bullet" from="EnemyLine2" to="." method="_on_enemy_line_2_spawn_bullet"]
+[connection signal="all_invaders_dead" from="EnemyLine3" to="." method="_on_enemy_line_3_all_invaders_dead"]
+[connection signal="invader_death" from="EnemyLine3" to="." method="_on_enemy_line_3_invader_death"]
+[connection signal="spawn_bullet" from="EnemyLine3" to="." method="_on_enemy_line_3_spawn_bullet"]
+[connection signal="spawn_bullet" from="Player" to="." method="_on_player_spawn_bullet"]
+[connection signal="timeout" from="EnemyTimer" to="EnemyLine1" method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="EnemyTimer" to="EnemyLine2" method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="EnemyTimer" to="EnemyLine3" method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="MothershipTimer" to="." method="_on_mothership_timer_timeout"]

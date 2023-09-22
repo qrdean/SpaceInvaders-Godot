@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0jsa5llqplbi"]
+
+[ext_resource type="Script" path="res://invader.gd" id="1_7lnpy"]
+[ext_resource type="Texture2D" uid="uid://ci1caflbjr3o2" path="res://assets/invader.png" id="1_8nr76"]
+[ext_resource type="PackedScene" uid="uid://d12df7veu2mon" path="res://enemy_bullet.tscn" id="2_et4pi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkpjg"]
+radius = 7.0
+height = 24.0
+
+[node name="Invader" type="Node2D"]
+script = ExtResource("1_7lnpy")
+bullet = ExtResource("2_et4pi")
+
+[node name="InvaderSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_8nr76")
+
+[node name="CollisionArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+shape = SubResource("CapsuleShape2D_qkpjg")
+
+[node name="bulletspawn" type="Node2D" parent="."]
+position = Vector2(0, 12)
+
+[connection signal="area_entered" from="CollisionArea" to="." method="_on_collision_area_area_entered"]
+[connection signal="body_entered" from="CollisionArea" to="." method="_on_collision_area_body_entered"]

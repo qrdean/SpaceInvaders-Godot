@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ekbk8i2acfu0"]
+
+[ext_resource type="Texture2D" uid="uid://dm5hxtdv7bh0b" path="res://assets/ship.png" id="1_0swtj"]
+[ext_resource type="Script" path="res://player.gd" id="1_tg7vm"]
+[ext_resource type="PackedScene" uid="uid://ddtyi856kg1xn" path="res://player_bullet.tscn" id="2_huygb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_55m78"]
+height = 28.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_tg7vm")
+bullet = ExtResource("2_huygb")
+
+[node name="ShipSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_0swtj")
+
+[node name="bulletspawn" type="Node2D" parent="."]
+position = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_55m78")
+
+[node name="Reload" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Reload" to="." method="_on_reload_timeout"]

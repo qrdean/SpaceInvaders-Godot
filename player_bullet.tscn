@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddtyi856kg1xn"]
+
+[ext_resource type="Texture2D" uid="uid://clac7o5kuconc" path="res://assets/rocket.png" id="1_bkmyx"]
+[ext_resource type="Script" path="res://player_bullet.gd" id="1_lx1kc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxoww"]
+radius = 4.0
+height = 16.0
+
+[node name="PlayerBullet" type="Area2D"]
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_lx1kc")
+
+[node name="Rocket" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_bkmyx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jxoww")
